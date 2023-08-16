@@ -21,8 +21,7 @@ function renderGallery() {
     )
     .join("");
 
-  galleryContainer.galleryContainer;
-  innerHTML = galleryHTML;
+  galleryContainer.innerHTML = galleryHTML;
 }
 
 galleryContainer.addEventListener("click", (event) => {
@@ -40,7 +39,6 @@ galleryContainer.addEventListener("click", (event) => {
   }
 });
 
-renderGallery;
 renderGallery();
 
 console.log(galleryItems);

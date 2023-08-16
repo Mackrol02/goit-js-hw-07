@@ -1,12 +1,12 @@
-import { galleryItems } from './gallery-items.js';
+import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
-const galleryContainer = document.querySelector('.gallery');
+const galleryContainer = document.querySelector(".gallery");
 
 function renderGallery() {
-  
- 
-const galleryHTML = galleryItems.map(item => `
+  const galleryHTML = galleryItems
+    .map(
+      (item) => `
     <li class="gallery__item">
       <a class="gallery__link" href="${item.largeImage}">
         <img
@@ -16,45 +16,34 @@ const galleryHTML = galleryItems.map(item => `
         />
       </a>
     </li>
-  `).join('');
+  `
+    )
+    .join("");
 
-  galleryContainer.
+  galleryContainer.gallery;
 
-  gallery
-
-
- 
-
-
-innerHTML = galleryHTML;
+  innerHTML = galleryHTML;
 }
 
 function initLightbox() {
-  const lightbox = new SimpleLightbox('.gallery a', {
-    
-   
-captions: true,
-    
-    captionsData
-captionsData: 'alt',
-    
-    caption
-captionPosition: 'bottom',
-    
-    captionDelay
+  const lightbox = new SimpleLightbox(".gallery a", {
+    captions: true,
 
-   
-captionDelay: 250
+    captionsData: "alt",
+
+    captionPosition: "bottom",
+
+    captionDelay: 250,
   });
 
-  lightbox.on('error', () => {
-    console.log('Error loading image.');
+  lightbox.on("error", () => {
+    console.log("Error loading image.");
   });
 }
 
 renderGallery();
 
-initLight
+initLight;
 initLightbox();
 
 console.log(galleryItems);
