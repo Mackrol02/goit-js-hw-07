@@ -31,7 +31,7 @@ galleryContainer.addEventListener("click", (event) => {
     const source = event.target.getAttribute("data-source");
 
     const instance = basicLightbox.create(`
-        <img src="${source}" alt="Image" />
+        <img src="${source}" alt="Image description" />
       `);
     instanceshow();
   }
