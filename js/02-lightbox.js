@@ -43,7 +43,6 @@ function initLightbox() {
 
 renderGallery();
 
-initLight;
 initLightbox();
 
 console.log(galleryItems);

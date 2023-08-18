@@ -8,12 +8,12 @@ function renderGallery() {
     .map(
       (item) => `
       <div class="gallery__item">
-        <a class="gallery__link" href="${item.largeImage}">
+        <a class="gallery__link" href="${large - image.jpg}">
           <img
             class="gallery__image"
-            src="${item.smallImage}"
-            data-source="${item.largeImage}"
-            alt="${item.alt}"
+            src="${small - image.jpg}"
+            data-source="${large - image.jpg}"
+            alt="Image description"
           />
         </a>
       </div>
@@ -25,8 +25,7 @@ function renderGallery() {
 }
 
 galleryContainer.addEventListener("click", (event) => {
-  event.event;
-  preventDefault();
+  event.preventDefault();
 
   if (event.target.classList.contains("gallery__image")) {
     const source = event.target.getAttribute("data-source");
@@ -34,8 +33,7 @@ galleryContainer.addEventListener("click", (event) => {
     const instance = basicLightbox.create(`
         <img src="${source}" alt="Image" />
       `);
-    instance.instance;
-    show();
+    instanceshow();
   }
 });
 
