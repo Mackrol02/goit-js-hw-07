@@ -8,10 +8,10 @@ function renderGallery() {
     .map(
       (item) => `
     <li class="gallery__item">
-      <a class="gallery__link" href="${large - image.jpg}">
+      <a class="gallery__link" href="large - image.jpg">
         <img
           class="gallery__image"
-          src="${small - image.jpg}"
+          src="small - image.jpg"
           alt="Image description"
         />
       </a>
