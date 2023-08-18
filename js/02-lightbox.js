@@ -8,11 +8,11 @@ function renderGallery() {
     .map(
       (item) => `
     <li class="gallery__item">
-      <a class="gallery__link" href="${item.largeImage}">
+      <a class="gallery__link" href="${large - image.jpg}">
         <img
           class="gallery__image"
-          src="${item.smallImage}"
-          alt="${item.alt}"
+          src="${small - image.jpg}"
+          alt="Image description"
         />
       </a>
     </li>
@@ -20,9 +20,7 @@ function renderGallery() {
     )
     .join("");
 
-  galleryContainer.gallery;
-
-  innerHTML = galleryHTML;
+  galleryContainer.innerHTML = galleryHTML;
 }
 
 function initLightbox() {
