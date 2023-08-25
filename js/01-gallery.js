@@ -30,7 +30,7 @@ galleryContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("gallery__image")) {
     const source = event.target.getAttribute("data-source");
     const instance = basicLightbox.create(`
-      <img src="${preview}" alt="${item.description}" />
+      <img src="${item.orginal}" alt="${item.description}" />
     `);
     instance.show();
   }
