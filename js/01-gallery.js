@@ -43,10 +43,3 @@ function imgOnClick(evt) {
   );
   instance.show();
 }
-
-const blockOnSave = document.querySelectorAll(".gallery__image");
-for (const image of blockOnSave) {
-  image.addEventListener("click", (event) => {
-    event.preventDefault();
-  });
-}
