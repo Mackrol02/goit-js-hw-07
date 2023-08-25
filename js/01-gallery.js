@@ -23,10 +23,13 @@ function renderGallery() {
 
   galleryContainer.innerHTML = galleryHTML;
 }
+galleryContainer.addEventListener("click", (event) => {
+  event.preventDefault();
 
-const blockOnSave = document.querySelectorAll(".gallery__image");
-for (const image of blockOnSave) {
-  image.addEventListener("click", (event) => {
-    event.preventDefault();
-  });
-}
+  const blockOnSave = document.querySelectorAll(".gallery__image");
+  for (const image of blockOnSave) {
+    image.addEventListener("click", (event) => {
+      event.preventDefault();
+    });
+  }
+});
