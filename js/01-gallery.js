@@ -1,4 +1,4 @@
-import { galleryItems } from "/GOIT-JS-HW-06./gallery-items.js";
+import { galleryItems } from "/GOIT-JS-HW-06/gallery-items.js";
 // Change code below this line
 
 const galleryContainer = document.querySelector(".gallery");
