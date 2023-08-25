@@ -8,12 +8,12 @@ function renderGallery() {
     .map(
       (item) => `
       <div class="gallery__item">
-        <a class="gallery__link" href="large-image.jpg">
+        <a class="gallery__link" href="preview">
           <img
             class="gallery__image"
-            src="small-image.jpg"
-            data-source="large-image.jpg"
-            alt="Image description"
+            src="original"
+            data-source="preview"
+            alt="description"
           />
         </a>
       </div>
