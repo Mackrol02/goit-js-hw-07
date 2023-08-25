@@ -24,16 +24,9 @@ function renderGallery() {
   galleryContainer.innerHTML = galleryHTML;
 }
 
-galleryContainer.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  if (event.target.classList.contains("gallery__image")) {
-    const source = event.target.getAttribute("data-source");
-    const instance = basicLightbox.create(`
-      <img src="${item.orginal}" alt="${item.description}" />
-    `);
-    instance.show();
-  }
-});
-
-renderGallery();
+const blockOnSave = document.querySelectorAll(".gallery__image");
+for (const image of blockOnSave) {
+  image.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
+}
