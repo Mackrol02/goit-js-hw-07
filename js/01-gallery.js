@@ -1,12 +1,9 @@
 import { galleryItems } from "./gallery-items.js";
 // Change code below this line
-
 const galleryContainer = document.querySelector(".gallery");
-
-function renderGallery() {
-  const galleryHTML = galleryItems
-    .map(
-      (item) => `
+const galleryHTML = galleryItems
+  .map(
+    (item) => `
       <div class="gallery__item">
         <a class="gallery__link" href="${item.original}">
           <img
@@ -18,12 +15,10 @@ function renderGallery() {
         </a>
       </div>
     `
-    )
-    .join("");
-
-  galleryContainer.innerHTML = galleryHTML;
-}
-
+  )
+  .join("");
+galleryContainer.insertAdjacentHTML("afterbegin", galleryHTML);
+galleryContainer.addEventListener("click", imgOnClick);
 function imgOnClick(evt) {
   if (evt.target.nodeName !== "IMG") {
     return;
@@ -44,7 +39,6 @@ function imgOnClick(evt) {
   );
   instance.show();
 }
-
 const blockOnSave = document.querySelectorAll(".gallery__image");
 for (const image of blockOnSave) {
   image.addEventListener("click", (event) => {
