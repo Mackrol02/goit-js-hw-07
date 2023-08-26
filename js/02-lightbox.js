@@ -19,7 +19,8 @@ function renderGallery() {
   `
     )
     .join("");
-
+  galleryContainer.insertAdjacentHTML("afterbegin", galleryHTML);
+  galleryContainer.addEventListener("click", initLightbox);
   galleryContainer.innerHTML = galleryHTML;
 }
 
