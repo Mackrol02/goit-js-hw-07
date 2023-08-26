@@ -8,7 +8,7 @@ function renderGallery() {
     .map(
       (item) => `
     <li class="gallery__item">
-      <a class="gallery__link" href="${item.orginal}">
+      <a class="gallery__link" href="${item.original}">
         <img
           class="gallery__image"
           src="${item.preview}"
