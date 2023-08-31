@@ -3,7 +3,7 @@ import { galleryItems } from "./gallery-items.js";
 
 const galleryContainer = document.querySelector(".gallery");
 
-function renderGallery() {
+
   const galleryHTML = galleryItems
     .map(
       (item) => `
@@ -20,11 +20,10 @@ function renderGallery() {
     )
     .join("");
   galleryContainer.insertAdjacentHTML("afterbegin", galleryHTML);
-  galleryContainer.addEventListener("click", initLightbox);
-  galleryContainer.innerHTML = galleryHTML;
-}
 
-function initLightbox() {
+
+
+
   const lightbox = new SimpleLightbox(".gallery a", {
     captions: true,
 
@@ -35,11 +34,5 @@ function initLightbox() {
     captionDelay: 250,
   });
 
-  lightbox.on("error", () => {
-    console.log("Error loading image.");
-  });
-}
 
-renderGallery();
 
-console.log(galleryItems);
